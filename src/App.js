@@ -6,11 +6,14 @@ import "./App.css";
 function App() {
   const [data, setData] =  useState({characters:[]})
 
-  useEffect(async () => {
-    const response =  await axios.get('https://rickandmortyapi.com/api/character/');
-    const {results} =  response.data;
+  useEffect(() => {
+    const fetchCharacters = async () =>{
+      const response  =  await axios.get('https://rickandmortyapi.com/api/character/')
+      const {results} =  response.data
+      setData({characters:results});
+    }
 
-    setData({characters:results});
+    fetchCharacters();
 
   },[])
 
