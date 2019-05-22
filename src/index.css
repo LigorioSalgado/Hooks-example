@@ -3,3 +3,28 @@
   font-weight:bold;
   padding: 1.5rem 1rem;
 }
+
+.form-control{
+  width: 24.5rem;
+  font-size: 2rem;
+  outline: none;
+
+}
+
+.form-control:focus{
+  outline: none;
+  border: 1px solid gold;
+}
+
+.btn {
+  width: 7.4rem;
+  padding: 0.7rem 0rem;
+  font-size: 1.5rem;
+
+}
+
+
+
+.form-control::placeholder { /* Most modern browsers support this now. */
+  color:    #cecece;
+}
