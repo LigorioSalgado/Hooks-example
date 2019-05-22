@@ -45,8 +45,8 @@ function App() {
 
         <div className="row my-4">
         {
-          data.characters.map((character) => (
-              <Card character={character}/>
+          data.characters.map((character,index) => (
+              <Card character={character} key={index}/>
           ))
         }
   
