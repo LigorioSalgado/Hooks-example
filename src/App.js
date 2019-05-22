@@ -30,17 +30,7 @@ function App() {
         </div>
 
         <div className="row my-4">
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-
+  
         </div>
       </section>
     </Fragment>
