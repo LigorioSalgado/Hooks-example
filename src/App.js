@@ -1,8 +1,19 @@
-import React, { Fragment } from "react";
+import React, { Fragment,useState,useEffect } from "react";
 import Card from './Card';
+import axios from 'axios';
 import "./App.css";
 
 function App() {
+  const [data, setData] =  useState({characters:[]})
+
+  useEffect(async () => {
+    const response =  await axios.get('https://rickandmortyapi.com/api/character/');
+    const {results} =  response.data;
+
+    setData({characters:results});
+
+  },[])
+
   return (
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-dark bg-info">
@@ -22,7 +33,7 @@ function App() {
                   placeholder="Rick"
                 />
               </div>
-              <button type="submit" class="btn btn-warning mb-2">
+              <button type="submit" className="btn btn-warning mb-2">
                 Buscar
               </button>
             </form>
